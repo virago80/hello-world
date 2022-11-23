@@ -22,7 +22,8 @@ jobs:
           command: |
             echo Running test
           
-            which xcversion
+            ls -la /Applications
+            xcrun simctl runtime list
             
 
 # Invoke jobs via workflows
