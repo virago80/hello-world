@@ -21,7 +21,8 @@ jobs:
           shell: /bin/sh
           command: |
             echo Running test
-          
+            
+            sw_vers
             ls -la /Applications
             xcrun simctl runtime list
             
