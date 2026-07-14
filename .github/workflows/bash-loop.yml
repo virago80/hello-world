@@ -8,8 +8,8 @@ on:
 jobs:
   run-loop:
     runs-on:
-      - image:linux-docker-bitvirt
-      - machine_type:g2.linux.amd-zen4.8c-32g
+      - image:osx-tahoe-26-edge
+      - machine_type:g2.mac.m2pro.6c-14g
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
