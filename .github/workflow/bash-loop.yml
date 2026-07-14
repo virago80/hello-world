@@ -1,0 +1,25 @@
+name: Run Bash Loop
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-loop:
+    runs-on:
+      - image:linux-docker-bitvirt
+      - machine_type:g2.linux.amd-zen4.8c-32g
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run bash loop script 🚀
+        run: |
+          echo "Starting loop"
+          for i in {1..60}
+          do
+            echo "Loop iteration $i"
+            sleep 1
+          done
+          echo "Loop finished"
